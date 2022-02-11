@@ -1,4 +1,4 @@
-##Saint Margrethen
+## Saint Margrethen
 
 Saint Margrethen was initially a basic HTML and CSS project I used to get a better understanding of HTML and CSS concepts about two months into my coding journey. It is a static site currently but with everything I have learnt so far, I Plan to make it responsive with Media queries, improve its file structure and user interface using React and Material UI respectively and make it more accessible using WCAG guidelines this time as I start the project, while it progresses and until I am done.
 
