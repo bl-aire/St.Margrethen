@@ -1,56 +1,30 @@
-import * as React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
-import { Box } from '@material-ui/core';
+import React from "react";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import Navbar from "./navbar";
+/*import Home from "./pages/home";
+import About from "./pages/about";
+import Services from "./pages/service";
+import Feedback from "./pages/feedback";
+import Contact from "./pages/contact";
+import WhatToExpect from "./pages/wte";*/
 
-import './App.css';
-import logo from './header-logo.png';
-
-const useStyles = makeStyles({
-  containerBox : {
-    display:"flex",
-    justifyContent: "space-between"
-  },
-  childBox : {
-    paddingRight: "4em",
-    alignSelf: "center"
-  }
-
-}
-)
-
-function App() {
-  const classes = useStyles ();
+      /*<Router>
+        <Navbar />
+        <Switch>
+          <Route exact path="/" component={Home} />
+          <Route path="/about" component={About} />
+          <Route path="/services" component={Services} />
+          <Route path="/wte" component={WhatToExpect} />
+          <Route path="/feedback" component={Feedback} />
+          <Route path="/contact" component={Contact} />
+        </Switch>
+      </Router>*/
+function App (){
   return (
-    <div className="App">
-      <header>
-        <Box className={classes.containerBox}>
-          <Box>
-            <img src={logo} className="App-logo" alt="logo"></img>
-          </Box>
-          <Box className={classes.containerBox}>
-            <Box className={classes.childBox}>
-              Home
-            </Box>
-            <Box className={classes.childBox}>
-              About Us
-            </Box>
-            <Box className={classes.childBox}>
-              Our Services
-            </Box>
-            <Box className={classes.childBox}>
-              What to expect
-            </Box>
-            <Box className={classes.childBox}>
-              Feedback
-            </Box>
-            <Box className={classes.childBox}>
-              Contact
-            </Box>
-          </Box>
-        </Box>
-      </header>
-    </div>
-  );
+    <Router>
+      <Navbar />
+    </Router>
+  )
 }
 
 export default App;
