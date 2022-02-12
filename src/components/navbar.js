@@ -5,15 +5,15 @@ import {
     Toolbar,
     CssBaseline,
     makeStyles,
-    Typography,
     useTheme,
     useMediaQuery,
-} from "@material-ui/core"
+} from "@material-ui/core";
 import DrawerComponent from "./drawer.js";
+import logo from "./header-logo.png";
 
 const useStyles = makeStyles((theme) => ({
     navlinks: {
-        marginLeft: theme.spacing(10),
+        marginLeft: theme.spacing(35),
         display: "flex",
     },
     logo: {
@@ -24,10 +24,10 @@ const useStyles = makeStyles((theme) => ({
         textDecoration: "none",
         color: "black",
         fontSize: "20px",
-        marginLeft: theme.spacing(20),
+        right:"0",
+        marginLeft: theme.spacing(5),
         "&:hover": {
             color: "red",
-            borderBottom: "1px solid white",
         },
     },
 }));
@@ -39,33 +39,33 @@ function Navbar() {
 
 
     return (
-        <AppBar position="static">
+        <AppBar position="static" style={{ background: "#FFFFFF" }}>
             <CssBaseline />
             <Toolbar>
 
-                <Typography>Logo</Typography>
+                <img src={logo}></img>
 
                 {isMobile ? (<DrawerComponent />) : (
                     <div className={classes.navlinks}>
                         <Link to="/" className={classes.link}>
                             Home
-                    </Link>
+                        </Link>
                         <Link to="/about" className={classes.link}>
                             About Us
-                    </Link>
+                        </Link>
                         <Link to="/services" className={classes.link}>
                             Our services
-                    </Link>
+                        </Link>
                         <Link to="/wte" className={classes.link}>
                             What To Expect
-                    </Link>
+                        </Link>
                         <Link to="/feedback" className={classes.link}>
                             Feedback
-                    </Link>
+                        </Link>
                         <Link to="/contact" className={classes.link}>
                             Contact
-                    </Link>
-                </div>)}
+                        </Link>
+                    </div>)}
             </Toolbar>
         </AppBar>
     );

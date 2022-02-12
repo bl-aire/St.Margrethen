@@ -5,25 +5,25 @@ import {
     List,
     ListItem,
     ListItemText,
+    useTheme,
     makeStyles
 } from "@material-ui/core";
 import MenuIcon from "@material-ui/icons/Menu";
 import { Link } from "react-router-dom";
 
-const useStyles = makeStyles(() => ({
+const useStyles = makeStyles((theme) => ({
     link: {
         textDecoration: "none",
-        color: "blue",
-        fontSize: "20px",
+        fontSize: "10px",
     },
-    icon: {
-        color: "white"
-    }
+    MenuIcon: {
+        color: "black",
+    },
 }));
 
 function DrawerComponent() {
     const classes = useStyles();
-
+    const theme = useTheme();
     const [openDrawer, setOpenDrawer] = useState(false);
 
     return (
